@@ -1,0 +1,25 @@
+1.pip install -r requirements.txt
+2.python run_all.py
+that set Enjoy.......
+
+
+OR
+
+----------------------------------------------------------------------------
+1.Fetch emails :python email_fetcher.py
+
+Fetches emails, filters support emails, adds priority, sentiment, extracted info, saves to database.
+
+2.Generate AI replies: python generate_responses.py
+
+Reads emails from database
+Generates AI responses using OpenAI GPT
+Saves replies in the database
+
+3.Launch dashboard: python -m streamlit run dashboard.py
+
+View all emails
+Edit AI replies
+Send emails via Gmail API
+See analytics charts (priority & sentiment)
+

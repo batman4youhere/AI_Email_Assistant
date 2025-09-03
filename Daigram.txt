@@ -1,0 +1,46 @@
+        ┌──────────────┐
+        │  Incoming    │
+        │   Emails     │
+        └─────┬────────┘
+              │
+              ▼
+   ┌──────────────────────┐
+   │  Email Fetcher        │
+   │  - Filters Support    │
+   │  - Extracts Info      │
+   │  - Adds Priority &    │
+   │    Sentiment          │
+   └─────┬────────────────┘
+         │
+         ▼
+   ┌──────────────────────┐
+   │  AI Response Generator│
+   │  - Uses OpenAI GPT    │
+   │  - Context-aware      │
+   │  - Draft replies      │
+   └─────┬────────────────┘
+         │
+         ▼
+   ┌──────────────────────┐
+   │  SQLite Database      │
+   │  - Stores emails      │
+   │  - Stores AI replies  │
+   │  - Stores metadata    │
+   └─────┬────────────────┘
+         │
+         ▼
+   ┌──────────────────────┐
+   │  Streamlit Dashboard  │
+   │  - Shows emails       │
+   │  - Shows priority &   │
+   │    sentiment          │
+   │  - Edit AI replies    │
+   │  - Analytics charts   │
+   └─────┬────────────────┘
+         │
+         ▼
+   ┌──────────────────────┐
+   │  Gmail API            │
+   │  - Sends edited AI    │
+   │    replies to users   │
+   └──────────────────────┘
