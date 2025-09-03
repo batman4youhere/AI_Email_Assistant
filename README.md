@@ -1,6 +1,8 @@
-# AI-Powered Email Assistant
+# 📧 AI-Powered Email Assistant
 
-## Overview
+---
+
+## Overview 
 The AI-Powered Email Assistant is a tool designed to automate the handling of support emails. It:
 - Fetches and filters support-related emails.
 - Categorizes emails by sentiment and priority.
@@ -33,24 +35,40 @@ The AI-Powered Email Assistant is a tool designed to automate the handling of su
 - Interactive graphs for email trends and statuses
 
 ---
+## 🚀 Setup Instructions
 
-## Installation
-First create credintials using 
-Google Cloud console
-https://console.cloud.google.com
-then copy them to backend Folder 
+### 1. Clone the repo
+```bash
+git clone https://github.com/batman4youhere/ai-email-assistant.git
+cd ai-email-assistant
+````
 
-then create 
-- OpenAI API key using https://platform.openai.com/ or gemeni
+### 3. Install dependencies
 
-### Prerequisites
+```bash
+pip install -r requirements.txt
+```
+### 4. Prerequisites
 - Python 3.9+
 - Google Cloud `credentials.json`
 - OpenAI API key
 
-### Install Dependencies
-```bash
-pip install -r requirements.txt
+### 5. Setup Gmail API
 
-### RUN
---python run_all.py
+* Go to [Google Cloud Console](https://console.cloud.google.com/)
+* Enable Gmail API
+* Download `credentials.json` and place it in `backend Folder`
+* On first run, it will create `token.json` 
+* OpenAI API key using https://platform.openai.com/ or gemeni and Enter it after runnig code when its asked
+
+### 6. Run the AI-Powered Email Assistant
+
+cd backend
+python run_all.py
+
+## 🛑 Stopping the System
+
+* Use the **Stop Application** button inside the dashboard.
+* Or press `Ctrl+C` in terminal.
+
+---
