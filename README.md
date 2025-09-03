@@ -63,8 +63,10 @@ pip install -r requirements.txt
 
 ### 6. Run the AI-Powered Email Assistant
 
+```bash
 cd backend
 python run_all.py
+```
 
 ## 🛑 Stopping the System
 
