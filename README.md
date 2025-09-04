@@ -12,7 +12,12 @@ The AI-Powered Email Assistant is a tool designed to automate the handling of su
 
 ---
 ## Demonstration video of all the working features 
-[![Watch the video](https://img.youtube.com/vi/7W6nKeOFWz4/hqdefault.jpg)](https://www.youtube.com/watch?v=7W6nKeOFWz4)
+<p align="center">
+  <a href="https://www.youtube.com/watch?v=7W6nKeOFWz4">
+    <img src="https://img.youtube.com/vi/7W6nKeOFWz4/hqdefault.jpg" width="600">
+  </a>
+</p>
+
 
 ## Features
 
@@ -76,6 +81,7 @@ python run_all.py
 * Or press `Ctrl+C` in terminal.
 
 ---
+
 
 
 
