@@ -1,1 +1,63 @@
+📧 AI Email Assistant
+1. Overview
+The AI Email Assistant automatically fetches emails, analyses their priority and sentiment, generates draft replies, and provides a dashboard to review and edit them.
+It consists of:
+•	A backend service (Gmail integration, processing, database).
+•	A Streamlit dashboard (for interaction and control).
+________________________________________
+2. Architecture
+🗂️ Project Structure
+backend/
+│── run_all.py         # Main entry point
+│── gmail_utils.py     # Gmail authentication & fetch
+│── email_tasks.py     # Database + processing logic
+│── dashboard.py       # Streamlit dashboard
+│── runtime_emails.db  # SQLite database (auto-created)
+│── stop_flag.txt      # Stop signal (auto-created)
+🔹 Components
+•	Backend: Handles Gmail fetch, database update, AI reply generation.
+•	Database: SQLite (reset on each run).
+•	Dashboard: Streamlit app for viewing, filtering, and editing emails.
+________________________________________
+3. Workflow
+flowchart TD
+    A[Gmail API] --> B[Fetch Emails]
+    B --> C[SQLite Database]
+    C --> D[AI Reply Generator]
+    D --> C
+    C --> E[Streamlit Dashboard]
+    E --> F[User edits reply / stops loop]
+    F --> C
+ASCII:
+[Gmail API] → [Fetch Emails] → [SQLite DB] ↔ [AI Reply Generator]
+                                      │
+                                      ↓
+                              [Streamlit Dashboard]
+                                      │
+                          [User edits reply / stop]
+________________________________________
+4. Approach
+1.	Fetch Emails
+o	Connect to Gmail API, retrieve latest N messages.
+2.	Pre-process & Store
+o	Extract sender, subject, body.
+o	Classify priority & sentiment.
+o	Save into SQLite DB.
+3.	Generate Replies
+o	Draft AI replies stored in DB under ai_reply.
+4.	Dashboard
+o	Emails displayed with filters (priority/sentiment).
+o	Users can edit AI replies.
+o	Button available to stop backend loop gracefully.
+________________________________________
+5. Key Design Choices
+•	✅ SQLite for lightweight, resettable storage.
+•	✅ Stop flag file (stop_flag.txt) for cross-process shutdown.
+•	✅ Streamlit for rapid, interactive dashboard with minimal code.
+•	✅ Modular separation for Gmail, DB tasks, and UI.
 
+6. References
+•	Gmail API: https://developers.google.com/gmail/api
+•	OpenAI API: https://platform.openai.com/docs/api-reference
+•	Streamlit: https://docs.streamlit.io
+•	Hugging Face Transformers: https://huggingface.co/transformers
